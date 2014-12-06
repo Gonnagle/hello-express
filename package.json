@@ -5,8 +5,9 @@
   "description": "Personal project to get to know Express.js and Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./bin/www"
+    "test": "echo \"Starting app with nodemon\" && nodemon ./bin/www",
+    "start": "forever start -w --watchDirectory ~/code/hello-express --uid live -a -l ~/code/hello-express/logs/forver.log -o ~/code/hello-express/logs/console.log -e ~/code/hello-express/logs/console.log ~/code/hello-express/bin/www",
+    "stop": "forever stop live"
   },
   "repository": {
     "type": "git",
